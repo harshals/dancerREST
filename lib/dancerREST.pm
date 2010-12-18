@@ -25,7 +25,7 @@ get '/api/user/:id' => sub {
         return $users{$params->{id}};
     }
     else {
-        return { error => "unknown user" };
+        send_error { error => "unknown user" };
     }
 };
 
@@ -42,7 +42,7 @@ post '/api/user/' => sub {
         return { id => $params->{id}, name => $params->{name} };
     }
     else {
-        return { error => "name is missing" };
+        send_error { error => "name is missing" };
     }
 };
 
