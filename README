@@ -1,4 +1,20 @@
 placing app.psgi or dancerREST.pl under bin/ directory does not 
 work correctly. I don't know why !!!
 
+plackup -a app.psgi
+
+and then 
+
+curl -H "Content-Type: application/json" -X GET http:r/1ocalhost:5000/api/user
+
+returns 
+
+{"error":"unknown user"}
+
 the main calling program needs to be placed in the root folder.
+
+now ..plackup -a bin/app.psgi
+and same curl statement returns
+
+An internal error occured
+
