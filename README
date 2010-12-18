@@ -1,0 +1,4 @@
+placing app.psgi or dancerREST.pl under bin/ directory does not 
+work correctly. I don't know why !!!
+
+the main calling program needs to be placed in the root folder.
